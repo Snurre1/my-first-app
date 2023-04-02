@@ -31,16 +31,21 @@ function ProductList() {
     if (isError) {
         return <div>This is an error</div>
     }
-    return (<div>
-        <PL.Heading> <h1>The home of the goods</h1></PL.Heading>
+    return (
         <div>
-    <PL.Container>
-        {
-            products.map((product) => (
-                <Product key={product.id} product={product} />
-            ))
-        }
-        </PL.Container></div></div>
+            <PL.Heading>
+                <h1>The home of the goods</h1>
+            </PL.Heading>
+            <div>
+                <PL.Container>
+                {
+                    products.map((product) => (
+                        <Product key={product.id} product={product} />
+                    ))
+                }
+                </PL.Container>
+            </div>
+        </div>
     )
   
 }

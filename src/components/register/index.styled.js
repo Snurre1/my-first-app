@@ -1,26 +1,15 @@
 import styled from "styled-components";
-export const SingleStraight = styled.div`
+
+export const registerStraight = styled.div`
   text-align: center;
 `;
-export const SingleTitleContainer = styled.h1``;
 
-export const SingleImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
+export const widthForm = styled.div`
+  max-width: 150px;
+`;
+
+export const buttonStyling = styled.button`
   align-items: center;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-`;
-
-export const SingleImage = styled.img`
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-`;
-
-export const SingleButtonContainer = styled.button`
-    align-items: center;
     appearance: none;
     background-color: #3eb2fd;
     background-image: linear-gradient(340deg, rgb(235 48 34), rgb(255 255 255) 99%);
@@ -29,7 +18,7 @@ export const SingleButtonContainer = styled.button`
     border-width: 0;
     box-shadow: none;
     box-sizing: border-box;
-    color: blue;
+    color: #ffffff;
     cursor: pointer;
     display: inline-flex;
     font-family: CircularStd, sans-serif;
@@ -60,5 +49,4 @@ export const SingleButtonContainer = styled.button`
 
  :focus:not(:active) {
     box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
-  }
-`;
+  }`;

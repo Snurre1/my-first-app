@@ -1,12 +1,12 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import * as Single from "../singleproduct/index.styled";
 import { API_URL } from "../shared/urls";
 
 
 
-
-function SingleProduct()  {
+function SingleProduct() {
     const [data, setData] = useState(null)
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -17,10 +17,8 @@ function SingleProduct()  {
             try {
                 setIsLoading(true);
                 setIsError(false);
-               
                 const response = await fetch(API);
                 const json = await response.json();
-                console.log(json)
                 setData(json);
             } catch (error) {
                 
@@ -44,8 +42,15 @@ function SingleProduct()  {
 
     return (
         
-        <Single.SingleStraight><div><h1>{data.title}</h1><Single.SingleImageContainer><Single.SingleImage src={data.imageUrl}/></Single.SingleImageContainer><p>{data.description}</p><p>Rating: {data.rating}/5</p><Single.SingleButtonContainer>Add to Cart</Single.SingleButtonContainer>
-              </div></Single.SingleStraight>
+        <Single.SingleStraight>
+            <div>
+                <h1>{data.title}</h1>
+                <Single.SingleImageContainer><Single.SingleImage src={data.imageUrl} /></Single.SingleImageContainer>
+                <p>{data.description}</p>
+                <p>Rating: {data.rating}/5</p>
+              <Link to="/" style={{ textDecoration: 'none' }}> <Single.SingleButtonContainer>Home</Single.SingleButtonContainer></Link>
+            </div>
+        </Single.SingleStraight>
        
     );
 };

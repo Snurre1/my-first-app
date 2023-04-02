@@ -1,35 +1,21 @@
 import styled from "styled-components";
-export const SingleStraight = styled.div`
+
+export const CheckHomeStraigth = styled.div`
   text-align: center;
 `;
-export const SingleTitleContainer = styled.h1``;
 
-export const SingleImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-`;
-
-export const SingleImage = styled.img`
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-`;
-
-export const SingleButtonContainer = styled.button`
+export const HomeButton = styled.button`
+    margin: 20px;
     align-items: center;
     appearance: none;
     background-color: #3eb2fd;
-    background-image: linear-gradient(340deg, rgb(235 48 34), rgb(255 255 255) 99%);
+    background-image: linear-gradient(340deg, #F44336, rgb(20, 155, 243) 99%);
     background-size: calc(100% + 20px) calc(100% + 20px);
     border-radius: 100px;
     border-width: 0;
     box-shadow: none;
     box-sizing: border-box;
-    color: blue;
+    color: #ffffff;
     cursor: pointer;
     display: inline-flex;
     font-family: CircularStd, sans-serif;
