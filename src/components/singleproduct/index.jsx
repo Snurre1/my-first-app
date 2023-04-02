@@ -11,13 +11,12 @@ function SingleProduct() {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     let { id } = useParams();
-   const API = `${API_URL}/${id}`
     useEffect(() => {
         async function getData() {
             try {
                 setIsLoading(true);
                 setIsError(false);
-                const response = await fetch(API);
+                const response = await fetch(`${API_URL}/${id}`);
                 const json = await response.json();
                 setData(json);
             } catch (error) {

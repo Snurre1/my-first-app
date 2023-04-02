@@ -7,11 +7,10 @@ import * as P from "../product/index.styled"
 
 function Product({product: {title, description, imageUrl, price, discountedPrice, rating, id, tags, reviews,}}) {
   
-    const { cartProductIds } = useSelector((state) => state.cart)
+   // const { cartProductIds } = useSelector((state) => state.cart)
     const { addToCart } = cartSlice.actions
     const dispatch = useDispatch()
    
-  console.log(cartProductIds)
   return (
     
       <div>
