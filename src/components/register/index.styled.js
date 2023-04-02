@@ -18,7 +18,7 @@ export const buttonStyling = styled.button`
     border-width: 0;
     box-shadow: none;
     box-sizing: border-box;
-    color: #ffffff;
+    color: blue;
     cursor: pointer;
     display: inline-flex;
     font-family: CircularStd, sans-serif;
